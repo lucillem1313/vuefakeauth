@@ -11,7 +11,7 @@ Vue<span class="font-semibold text-gray-600">FakeAuth</span>
 <li class="bg-gray-400 text-lg py-2 px-2 hover:cursor-pointer text-center hover:bg-indigo-300 hover:text-orange-500"> Home </li></router-link> 
 <router-link to="/About"><li class="bg-gray-400 tx-lg py-2 px-2 hover:cursor-pointer text-center hover:bg-indigo-300 hover:text-orange-500"> About</li></router-link> 
 <router-link to="/Login"><li class="bg-gray-400 tx-lg py-2 px-2 hover:cursor-pointer text-center hover:bg-indigo-300 hover:text-red-500"> Login</li></router-link> 
-<router-link to="/Help"><li class="bg-gray-400 tx-lg py-2 px-2 hover:cursor-pointer text-center hover:bg-indigo-300 hover:text-red-500"> Help</li></router-link> 
+<router-link to="/Secret"><li class="bg-gray-400 tx-lg py-2 px-2 hover:cursor-pointer text-center hover:bg-indigo-300 hover:text-red-500"> Secret</li></router-link> 
 </ul>
 
 

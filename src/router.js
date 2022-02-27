@@ -3,7 +3,7 @@ import Home  from "./pages/index.vue";
 import About from  "./pages/about.vue";
 import Login from  "./pages/login.vue";
 import NotFound from  "./pages/404.vue";
-import Help from  "./pages/help.vue";
+import Secret from  "./pages/secret.vue";
 
 const routes = [
     {
@@ -28,9 +28,9 @@ component: Login,
 },
 {
 
-path: "/help",
-name: "Help",
-component: Help,
+path: "/secret",
+name: "secret",
+component: Secret,
 
 },
 {
