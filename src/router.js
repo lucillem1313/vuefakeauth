@@ -11,7 +11,7 @@ const { isAuthenticated } = useAuth();
 
 const routes = [
   {
-    path: "/index",
+    path: "/",
     name: "Index",
     component: Index,
   },
@@ -30,8 +30,11 @@ const routes = [
     name: "Secret",
     component: Secret,
     beforeEnter: (to, from, next) => {
-      
-      next("/");
+      console.log(isAuthenticated);
+      if (!isAuthenticated.value) {
+        next("/login");
+      }
+      next();
     },
   },
   {

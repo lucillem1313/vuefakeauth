@@ -26,12 +26,17 @@ const logginIn = () => {
  <img class="h-64" src="../assets/bglogin.png" alt="Hello BG">
  <form @submit.prevent="logginIn" class="flex flex-col p-4 space-y-4">
  <input type="text" class=" p-2 border-2 rounded-lg" placeholder="Username" v-model="username" /> 
-<input type="Password" class=" p-2 border-2 rounded-lg" placeholder="Password" v-model="placeholder"  /> 
+<input type="Password" class=" p-2 border-2 rounded-lg" placeholder="Password" v-model="password" /> 
 <button type="submit" @submit.prevent="logginIn" class="py-2 rounded-lg text-indigo-800 bg-teal-500">Login</button>
  </form>
  </div>
+  <div
+      v-if="!ready && error"
+      class="absolute w-1/3 p-4 text-center text-red-800 bg-red-300 rounded-lg  bottom-2 right-2"
+    >
+      {{ error }}
  </div>
 
- 
+ </div>
 
 </template>
