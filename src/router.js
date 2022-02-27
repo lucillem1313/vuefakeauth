@@ -1,48 +1,49 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home  from "./pages/index.vue";
-import About from  "./pages/about.vue";
-import Login from  "./pages/login.vue";
-import NotFound from  "./pages/404.vue";
-import Secret from  "./pages/secret.vue";
+import useAuth from "./composable/useAuth";
+
+import Index from "./pages/index.vue";
+import About from "./pages/about.vue";
+import Login from "./pages/login.vue";
+import Secret from "./pages/secret.vue";
+import NotFound from "./pages/404.vue";
+
+const { isAuthenticated } = useAuth();
 
 const routes = [
-    {
-path: "/index",
-name: "Home",
-component: Home,
+  {
+    path: "/index",
+    name: "Index",
+    component: Index,
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: About,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+  },
+  {
+    path: "/secret",
+    name: "Secret",
+    component: Secret,
+    beforeEnter: (to, from, next) => {
+      
+      next("/");
     },
-    {
-path: "/about",
-name: "About",
-component: About,
-    },
-    {
-
-path: "/login",
-name: "login",
-component: Login,
-
-},
-{
-
-},
-{
-
-path: "/secret",
-name: "secret",
-component: Secret,
-
-},
-{
-path: "/:pathMatch(.*)*",
-name: "NotFound",
-component: NotFound,
-    },
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: NotFound,
+  },
 ];
 
 const router = createRouter({
- history: createWebHistory(),
- routes,
+  history: createWebHistory(),
+  routes,
 });
 
 export default router;
